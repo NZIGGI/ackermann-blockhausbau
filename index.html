@@ -1,162 +1,135 @@
-
-<!DOCTYPE html>
+<!-- index.html -->
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ackermann Blockhausbau – Skandinavische Blockhütten & Saunen</title>
-  <meta name="description" content="Traditioneller Blockhausbau im Allgäu: Blockhütten, Saunen, Garten- und Ferienhütten aus massivem Rundholz. Individuell geplant und in Handarbeit gefertigt." />
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ackermann Blockhausbau – Blockhütten & Saunen</title>
+  <meta name="description" content="Skandinavisch-kanadischer Rundholzbau aus dem Allgäu. Blockhütten, Saunen und Ferienhütten – handgefertigt, massiv, langlebig." />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body>
 
-  <header class="site-header">
-    <div class="container header-inner">
+<body>
+  <header>
+    <div class="nav">
       <div class="brand">
-        <div class="brand-mark">A</div>
-        <div class="brand-text">
-          <div class="brand-name">Ackermann Blockhausbau</div>
-          <div class="brand-sub">Blockhütten · Saunen · Rundholzbau</div>
-        </div>
+        <strong>Ackermann Blockhausbau</strong>
+        <span>Blockhütten · Saunen · Rundholzbau</span>
       </div>
 
-      <nav class="nav">
+      <nav class="nav-links" aria-label="Hauptnavigation">
         <a href="#leistungen">Leistungen</a>
         <a href="#galerie">Bilder</a>
         <a href="#bauweise">Bauweise</a>
-        <a href="#kontakt" class="nav-cta">Kontakt</a>
+        <a href="#kontakt">Kontakt</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero hero--image" style="--hero:url('assets/Hero.jpg');">
-    <div class="hero-overlay"></div>
+  <section class="hero" aria-label="Startbereich">
     <div class="hero-content">
-      <p class="kicker">Traditioneller Rundholzbau aus dem Allgäu</p>
+      <div class="kicker">Traditioneller Rundholzbau aus dem Allgäu</div>
       <h1>Blockhütten & Saunen – handgefertigt, massiv, langlebig.</h1>
-      <p class="lead">
+      <p>
         Skandinavisch-kanadische Bauweise, handgeschälte Stämme und traditionelle Eckverbindungen.
-        Individuell geplant und in Handarbeit umgesetzt.
+        Individuell geplant und in echter Handarbeit umgesetzt.
       </p>
 
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#kontakt">Anfrage stellen</a>
-        <a class="btn btn-ghost" href="#galerie">Bilder ansehen</a>
+        <a class="btn primary" href="#kontakt">Anfrage stellen</a>
+        <a class="btn" href="#galerie">Bilder ansehen</a>
       </div>
 
-      <div class="hero-badges">
-        <div class="badge">Zimmerermeister</div>
-        <div class="badge">Kanada-Erfahrung</div>
-        <div class="badge">100% Handarbeit</div>
-      </div>
+      <p class="muted" style="margin-top:1.1rem;">
+        Zimmerermeister · Kanada-Erfahrung · 100% Handarbeit
+      </p>
     </div>
   </section>
 
-  <main class="main">
-    <section id="leistungen" class="section">
-      <div class="section-head">
-        <h2>Leistungen</h2>
-        <p>Sauber geplant, robust gebaut. Von der Saunahütte bis zum Ferienhüttendorf.</p>
-      </div>
+  <main>
+    <section id="leistungen">
+      <h2>Leistungen</h2>
+      <p class="muted">Sauber geplant, robust gebaut. Von der Saunahütte bis zum Ferienhüttendorf.</p>
 
       <div class="cards">
-        <article class="card">
-          <h3>Blockhütten</h3>
-          <p>Gartenhütte, Wochenendhütte oder Rückzugsort. Massiv aus Rundholz, individuell geplant.</p>
-        </article>
+        <div class="card">
+          <strong>Blockhütten</strong>
+          <p>Gartenhütte, Wochenendhütte oder Rückzugsort – massiv aus Rundholz, individuell geplant.</p>
+        </div>
 
-        <article class="card">
-          <h3>Saunen</h3>
+        <div class="card">
+          <strong>Saunen</strong>
           <p>Luxuriöse Saunen in Handarbeit – für Privat, Thermen und besondere Orte.</p>
-        </article>
+        </div>
 
-        <article class="card">
-          <h3>Ferien- & Campinghütten</h3>
-          <p>Hütten für Campingplätze, Feriendörfer und Naturprojekte – effizient im Aufbau, langlebig im Betrieb.</p>
-        </article>
+        <div class="card">
+          <strong>Ferien- & Campinghütten</strong>
+          <p>Für Campingplätze, Feriendörfer und Naturprojekte – effizient im Aufbau, langlebig im Betrieb.</p>
+        </div>
 
-        <article class="card">
-          <h3>Individuelle Ausbauten</h3>
-          <p>Optional: Saunaofen, Kamin, Stromvorbereitung, Bodenaufbau, Dachdeckung nach Wunsch.</p>
-        </article>
+        <div class="card">
+          <strong>Individuelle Ausbauten</strong>
+          <p>Optional: Saunaofen/Kamin, Stromvorbereitung, Bodenaufbau & Bodenbelag, Dachdeckung nach Wunsch.</p>
+        </div>
       </div>
     </section>
 
-    <section id="galerie" class="section">
-      <div class="section-head">
-        <h2>Bilder</h2>
-        <p>Einblick in Arbeit, Material und Details.</p>
-      </div>
+    <section id="galerie">
+      <h2>Bilder</h2>
+      <p class="muted">Einblick in Arbeit, Material und Details.</p>
 
       <div class="gallery">
-        <figure class="gallery-item">
-          <img src="assets/Work1.jpg" alt="Blockhausbau – Arbeit am Stamm" loading="lazy">
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/Work2.jpg" alt="Blockhausbau – Detailarbeit" loading="lazy">
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/Work3.jpg" alt="Blockhausbau – Bearbeitung Rundholz" loading="lazy">
-        </figure>
+        <img src="assets/Work1.jpg" alt="Rundholzbau – Arbeit am Stamm" loading="lazy">
+        <img src="assets/Work2.jpg" alt="Detail – Eckverbindung / Bearbeitung" loading="lazy">
+        <img src="assets/Work3.jpg" alt="Handarbeit – Holzverarbeitung" loading="lazy">
       </div>
     </section>
 
-    <section id="bauweise" class="section">
-      <div class="section-head">
-        <h2>Bauweise</h2>
-        <p>Traditionelles Handwerk – klar erklärt, ohne Marketing-Gelaber.</p>
-      </div>
+    <section id="bauweise">
+      <h2>Bauweise</h2>
+      <p class="muted">
+        Traditionelles Handwerk – klar erklärt, ohne Marketing-Gelaber. Modernes und traditionelles Bauen sinnvoll kombiniert.
+      </p>
 
-      <div class="switches">
-        <details class="switch">
-          <summary>Eckverbindungen (Passgenauigkeit & Setzung)</summary>
-          <p>Rundholz arbeitet. Gute Eckverbindungen berücksichtigen Setzung, Dichtigkeit und Lastabtrag – damit es dauerhaft stabil bleibt.</p>
-        </details>
-
-        <details class="switch">
-          <summary>Handgeschälte Stämme (Oberfläche & Haltbarkeit)</summary>
-          <p>Beim Schälen bleibt die dichte äußere Holzschicht weitgehend erhalten. Das sieht gut aus und kann die Widerstandsfähigkeit erhöhen.</p>
-        </details>
-
-        <details class="switch">
-          <summary>Ohne Dämmung (Massivholz als Klima-Puffer)</summary>
-          <p>Massives Holz puffert Feuchte und Temperatur. Je nach Nutzung wird der Aufbau passend geplant (Sauna/ Ferien/ Ganzjahr).</p>
-        </details>
-      </div>
+      <ul class="bullets">
+        <li><strong>Eckverbindungen</strong> (Passgenauigkeit & Setzung) – langlebig und stabil.</li>
+        <li><strong>Handgeschälte Stämme</strong> – natürliche Oberfläche & Haltbarkeit.</li>
+        <li><strong>Ohne klassische Dämmung</strong> – Massivholz als Klima-Puffer (je nach Nutzung/Projekt).</li>
+        <li><strong>Individuelle Planung</strong> – Sauna, Gartenhaus, Tiny Home, Ferienhütte, Projektbau.</li>
+      </ul>
     </section>
 
-    <section id="kontakt" class="section contact">
-      <div class="section-head">
-        <h2>Kontakt</h2>
-        <p>Kurze Anfrage reicht. Ich melde mich zuverlässig zurück.</p>
+    <section class="kontakt" id="kontakt">
+      <h2>Kontakt</h2>
+      <p class="muted">Kurze Anfrage reicht. Ich melde mich zuverlässig zurück.</p>
+
+      <div class="contact-grid">
+        <div class="contact-box">
+          <p><strong>Telefon</strong><br>DEINE NUMMER</p>
+          <p><strong>E-Mail</strong><br><a href="mailto:DEINEMAIL@DOMAIN.DE">DEINEMAIL@DOMAIN.DE</a></p>
+          <p><strong>Region</strong><br>Allgäu · Bayern</p>
+        </div>
+
+        <div class="contact-box">
+          <p><strong>Über mich</strong><br>
+            Zimmerermeister aus dem Allgäu. Mehrere Jahre Kanada-Erfahrung im Blockhausbau – gelernt an großen Projekten,
+            heute umgesetzt als individuelle Handarbeit in der Region.
+          </p>
+        </div>
       </div>
 
-      <div class="contact-box">
-        <div>
-          <div class="label">Telefon</div>
-          <div class="value">DEINE NUMMER</div>
-        </div>
-        <div>
-          <div class="label">E-Mail</div>
-          <div class="value">DEINE MAIL</div>
-        </div>
-        <div>
-          <div class="label">Region</div>
-          <div class="value">Allgäu · Bayern</div>
-        </div>
-      </div>
-
-      <p class="fineprint">
-        Hinweis: Inhalte folgen im Detail (Impressum/Datenschutz) – kommt, sobald Domain final ist.
+      <p class="muted" style="margin-top:1rem;">
+        Hinweis: Impressum/Datenschutz kommen als separate Seite(n), sobald du deine finalen Kontaktdaten/Firma fix hast.
       </p>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>© <span id="y"></span> Ackermann Blockhausbau</p>
+  <footer>
+    © <span id="year"></span> Ackermann Blockhausbau · Allgäu
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
