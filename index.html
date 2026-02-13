@@ -1,135 +1,331 @@
-<!-- index.html -->
-<!doctype html>
-<html lang="de">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ackermann Blockhausbau – Blockhütten & Saunen</title>
-  <meta name="description" content="Skandinavisch-kanadischer Rundholzbau aus dem Allgäu. Blockhütten, Saunen und Ferienhütten – handgefertigt, massiv, langlebig." />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
+/* assets/css/styles.css — KOMPLETT (copy/paste) */
 
-<body>
-  <header>
-    <div class="nav">
-      <div class="brand">
-        <strong>Ackermann Blockhausbau</strong>
-        <span>Blockhütten · Saunen · Rundholzbau</span>
-      </div>
+:root{
+  /* wärmer/cremiger, mehr Pastell-Braun */
+  --bg: #f6f0e8;
+  --panel: #f1e6da;
+  --panel-2: #ead9c8;
+  --text: #2c241f;
+  --muted: #6b5f56;
+  --brand: #6a4a34;
+  --brand-2: #b08b67;
+  --line: rgba(44,36,31,.12);
+  --shadow: 0 12px 34px rgba(0,0,0,.08);
+  --radius: 18px;
+}
 
-      <nav class="nav-links" aria-label="Hauptnavigation">
-        <a href="#leistungen">Leistungen</a>
-        <a href="#galerie">Bilder</a>
-        <a href="#bauweise">Bauweise</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </div>
-  </header>
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background:
+    radial-gradient(1100px 600px at 25% 0%, #fff9f2 0%, var(--bg) 55%, #efe2d4 100%);
+}
 
-  <section class="hero" aria-label="Startbereich">
-    <div class="hero-content">
-      <div class="kicker">Traditioneller Rundholzbau aus dem Allgäu</div>
-      <h1>Blockhütten & Saunen – handgefertigt, massiv, langlebig.</h1>
-      <p>
-        Skandinavisch-kanadische Bauweise, handgeschälte Stämme und traditionelle Eckverbindungen.
-        Individuell geplant und in echter Handarbeit umgesetzt.
-      </p>
+/* HEADER */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(246,240,232,.90);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: .85rem 1rem;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.brand{
+  display:flex;
+  flex-direction: column;
+  gap: .12rem;
+  min-width: 180px;
+}
+.brand .title{
+  font-weight: 700;
+  letter-spacing: .2px;
+  font-size: 1.02rem;
+}
+.brand .subtitle{
+  font-size: .92rem;
+  color: var(--muted);
+}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap: .6rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.nav-links a{
+  text-decoration:none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: .95rem;
+  padding: .52rem .75rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: rgba(241,230,218,.55);
+}
+.nav-links a:hover{
+  border-color: var(--line);
+  background: rgba(234,217,200,.6);
+}
 
-      <div class="hero-actions">
-        <a class="btn primary" href="#kontakt">Anfrage stellen</a>
-        <a class="btn" href="#galerie">Bilder ansehen</a>
-      </div>
+/* HERO */
+.hero{
+  min-height: 64vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 2.4rem 1.25rem 3rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
 
-      <p class="muted" style="margin-top:1.1rem;">
-        Zimmerermeister · Kanada-Erfahrung · 100% Handarbeit
-      </p>
-    </div>
-  </section>
+  /* Bild + warmes Overlay */
+  background:
+    linear-gradient(135deg, rgba(106,74,52,.72), rgba(176,139,103,.45)),
+    url("assets/Hero.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:-40px;
+  background:
+    radial-gradient(600px 260px at 35% 20%, rgba(255,255,255,.18), transparent 60%),
+    radial-gradient(700px 380px at 70% 85%, rgba(0,0,0,.14), transparent 65%);
+  pointer-events:none;
+}
 
-  <main>
-    <section id="leistungen">
-      <h2>Leistungen</h2>
-      <p class="muted">Sauber geplant, robust gebaut. Von der Saunahütte bis zum Ferienhüttendorf.</p>
+.hero-content{
+  max-width: 980px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display:flex;
+  justify-content:center;
+}
+.hero-card{
+  width: min(760px, 100%);
+  text-align:center;
+  padding: 1.6rem 1.2rem 1.4rem;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,.28);
+  background: rgba(255,255,255,.10);
+  box-shadow: 0 18px 60px rgba(0,0,0,.20);
+  backdrop-filter: blur(8px);
+}
+.pill{
+  display:inline-block;
+  padding: .42rem .8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.35);
+  color: rgba(255,255,255,.92);
+  background: rgba(0,0,0,.10);
+  font-weight: 600;
+  font-size: .92rem;
+}
+.hero h1{
+  margin: .9rem 0 .5rem;
+  color: #fff;
+  font-size: clamp(2.05rem, 4.2vw, 3.35rem);
+  letter-spacing: .4px;
+}
+.hero p{
+  margin: 0 auto;
+  max-width: 52ch;
+  color: rgba(255,255,255,.90);
+  font-size: 1.05rem;
+}
+.hero-actions{
+  margin-top: 1.1rem;
+  display:flex;
+  gap: .7rem;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  padding: .7rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .95rem;
+  border: 1px solid transparent;
+}
+.btn-primary{
+  background: #fff;
+  color: var(--brand);
+}
+.btn-primary:hover{ opacity: .92; }
+.btn-ghost{
+  background: rgba(0,0,0,.14);
+  border-color: rgba(255,255,255,.28);
+  color: rgba(255,255,255,.95);
+}
+.btn-ghost:hover{ background: rgba(0,0,0,.20); }
 
-      <div class="cards">
-        <div class="card">
-          <strong>Blockhütten</strong>
-          <p>Gartenhütte, Wochenendhütte oder Rückzugsort – massiv aus Rundholz, individuell geplant.</p>
-        </div>
+.hero-meta{
+  margin-top: .95rem;
+  display:flex;
+  gap: .6rem;
+  justify-content:center;
+  flex-wrap: wrap;
+  color: rgba(255,255,255,.85);
+  font-size: .92rem;
+}
+.hero-meta span{
+  padding: .32rem .6rem;
+  border-radius: 999px;
+  background: rgba(0,0,0,.10);
+  border: 1px solid rgba(255,255,255,.22);
+}
 
-        <div class="card">
-          <strong>Saunen</strong>
-          <p>Luxuriöse Saunen in Handarbeit – für Privat, Thermen und besondere Orte.</p>
-        </div>
+/* MAIN / SECTIONS */
+main{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2.2rem 1.25rem 3.5rem;
+}
 
-        <div class="card">
-          <strong>Ferien- & Campinghütten</strong>
-          <p>Für Campingplätze, Feriendörfer und Naturprojekte – effizient im Aufbau, langlebig im Betrieb.</p>
-        </div>
+section{
+  background: rgba(255,255,255,.60);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 2rem 1.6rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+  margin-top: 1.2rem;
+}
 
-        <div class="card">
-          <strong>Individuelle Ausbauten</strong>
-          <p>Optional: Saunaofen/Kamin, Stromvorbereitung, Bodenaufbau & Bodenbelag, Dachdeckung nach Wunsch.</p>
-        </div>
-      </div>
-    </section>
+h2{
+  margin:0 0 .75rem;
+  font-size: 1.35rem;
+  color: var(--brand);
+}
 
-    <section id="galerie">
-      <h2>Bilder</h2>
-      <p class="muted">Einblick in Arbeit, Material und Details.</p>
+p{ margin: 0 0 1rem; color: var(--text); }
+.intro p{ color: var(--muted); max-width: 75ch; }
 
-      <div class="gallery">
-        <img src="assets/Work1.jpg" alt="Rundholzbau – Arbeit am Stamm" loading="lazy">
-        <img src="assets/Work2.jpg" alt="Detail – Eckverbindung / Bearbeitung" loading="lazy">
-        <img src="assets/Work3.jpg" alt="Handarbeit – Holzverarbeitung" loading="lazy">
-      </div>
-    </section>
+/* Leistungen */
+.leistungen ul{
+  list-style:none;
+  padding:0;
+  margin: .8rem 0 0;
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: .75rem;
+}
+.leistungen li{
+  background: linear-gradient(180deg, rgba(241,230,218,.95), rgba(234,217,200,.85));
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: .9rem 1rem;
+}
+.leistungen li strong{
+  display:block;
+  margin-bottom: .25rem;
+  color: var(--text);
+}
+.leistungen li span{
+  color: var(--muted);
+  font-size: .95rem;
+}
 
-    <section id="bauweise">
-      <h2>Bauweise</h2>
-      <p class="muted">
-        Traditionelles Handwerk – klar erklärt, ohne Marketing-Gelaber. Modernes und traditionelles Bauen sinnvoll kombiniert.
-      </p>
+/* Galerie */
+.gallery{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 1.1rem;
+}
+.gallery figure{
+  margin:0;
+  border-radius: 16px;
+  overflow:hidden;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.55);
+  box-shadow: 0 10px 26px rgba(0,0,0,.07);
+}
+.gallery img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.gallery figcaption{
+  padding: .7rem .9rem;
+  font-size: .92rem;
+  color: var(--muted);
+}
 
-      <ul class="bullets">
-        <li><strong>Eckverbindungen</strong> (Passgenauigkeit & Setzung) – langlebig und stabil.</li>
-        <li><strong>Handgeschälte Stämme</strong> – natürliche Oberfläche & Haltbarkeit.</li>
-        <li><strong>Ohne klassische Dämmung</strong> – Massivholz als Klima-Puffer (je nach Nutzung/Projekt).</li>
-        <li><strong>Individuelle Planung</strong> – Sauna, Gartenhaus, Tiny Home, Ferienhütte, Projektbau.</li>
-      </ul>
-    </section>
+/* Bauweise */
+.bauweise ul{
+  margin: .6rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+.bauweise li{ margin: .35rem 0; }
 
-    <section class="kontakt" id="kontakt">
-      <h2>Kontakt</h2>
-      <p class="muted">Kurze Anfrage reicht. Ich melde mich zuverlässig zurück.</p>
+/* Kontakt */
+.kontakt{
+  background: linear-gradient(180deg, rgba(241,230,218,.92), rgba(255,255,255,.60));
+}
+.contact-box{
+  display:grid;
+  gap: .65rem;
+  margin-top: .6rem;
+}
+.contact-line{
+  display:flex;
+  gap: .6rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.contact-line b{ min-width: 78px; color: var(--text); }
+.contact-line a{
+  color: var(--brand);
+  font-weight: 700;
+  text-decoration:none;
+}
+.contact-line a:hover{ text-decoration: underline; }
+.note{
+  margin-top: .85rem;
+  font-size: .92rem;
+  color: var(--muted);
+}
 
-      <div class="contact-grid">
-        <div class="contact-box">
-          <p><strong>Telefon</strong><br>DEINE NUMMER</p>
-          <p><strong>E-Mail</strong><br><a href="mailto:DEINEMAIL@DOMAIN.DE">DEINEMAIL@DOMAIN.DE</a></p>
-          <p><strong>Region</strong><br>Allgäu · Bayern</p>
-        </div>
+/* Footer */
+footer{
+  text-align:center;
+  padding: 1.8rem 1rem 2.5rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
 
-        <div class="contact-box">
-          <p><strong>Über mich</strong><br>
-            Zimmerermeister aus dem Allgäu. Mehrere Jahre Kanada-Erfahrung im Blockhausbau – gelernt an großen Projekten,
-            heute umgesetzt als individuelle Handarbeit in der Region.
-          </p>
-        </div>
-      </div>
+/* Responsive */
+@media (max-width: 700px){
+  .leistungen ul{ grid-template-columns: 1fr; }
+  section{ padding: 1.6rem 1.2rem; }
+  .nav{ padding: .75rem .9rem; }
+  .brand{ min-width: 0; }
+  .nav-links a{ padding: .48rem .65rem; font-size: .92rem; }
+  .hero{ min-height: 72vh; background-position: center 18%; }
+  .hero-card{ padding: 1.35rem 1rem 1.2rem; }
+}
 
-      <p class="muted" style="margin-top:1rem;">
-        Hinweis: Impressum/Datenschutz kommen als separate Seite(n), sobald du deine finalen Kontaktdaten/Firma fix hast.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    © <span id="year"></span> Ackermann Blockhausbau · Allgäu
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+@media (min-width: 700px){
+  .gallery{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1100px){
+  .gallery{ grid-template-columns: repeat(3, 1fr); }
+}
