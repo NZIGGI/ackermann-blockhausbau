@@ -6,86 +6,129 @@
   <title>Ackermann Blockhausbau</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-
 <body>
 
   <header class="site-header">
-    <div class="header-top">
-      <div class="brand">
-        <div class="brand-name">Ackermann</div>
-        <div class="brand-sub">Blockhausbau</div>
+    <div class="header-inner">
+      <div class="brand" aria-label="Ackermann Blockhausbau">
+        <div class="title">Ackermann Blockhausbau</div>
       </div>
 
-      <img class="header-logo" src="assets/logo.jpg" alt="Logo Ackermann Blockhausbau">
-    </div>
+      <nav class="nav" aria-label="Schnellnavigation">
+        <a href="#angebot">Angebot</a>
+        <a href="#ueber-uns">Über&nbsp;uns</a>
+        <a href="#bauweise">Bauweise</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
 
-    <nav class="header-nav" aria-label="Schnellnavigation">
-      <ul>
-        <li><a href="#angebot">Angebot</a></li>
-        <li><a href="#ueberuns">Über uns</a></li>
-        <li><a href="#bauweise">Bauweise</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
+      <img class="logo" src="assets/logo.jpg" alt="Logo Ackermann Blockhausbau" />
+    </div>
   </header>
 
-  <section class="hero" aria-label="Startbereich">
-    <div class="hero-content">
-      <h1>Blockhütten &amp; Saunen –<br>handgefertigt, massiv, langlebig.</h1>
-      <p>Skandinavisch-kanadische Bauweise, handgeschälte Stämme und traditionelle Eckverbindungen. Individuell geplant und in Handarbeit umgesetzt.</p>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#kontakt">Anfrage stellen</a>
-        <a class="btn btn-secondary" href="#ueberuns">Mehr erfahren</a>
+  <section class="hero" aria-label="Start">
+    <div class="hero-wrap">
+      <div class="hero-card">
+        <img src="assets/Hero.jpg" alt="Blockhütte / Rundholzbau" />
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Blockhütten &amp; Saunen – handgefertigt, massiv, langlebig.</h1>
+            <p>Skandinavisch-kanadische Bauweise, handgeschälte Stämme und traditionelle Eckverbindungen. Individuell geplant und in Handarbeit umgesetzt.</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#kontakt">Anfrage stellen</a>
+              <a class="btn secondary" href="#angebot">Mehr erfahren</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <main>
 
-    <section id="angebot" class="angebot">
+    <section id="angebot">
       <h2>Angebot</h2>
-      <p>Sauber geplant, robust gebaut – vom Einzelprojekt bis zur kompletten Hütte.</p>
-      <ul>
-        <li><strong>Blockhütten</strong><br>Gartenhütte, Wochenendhütte oder Rückzugsort – aus massivem Rundholz.</li>
-        <li><strong>Saunen</strong><br>Handgefertigte Saunen – privat, gewerblich oder als Ergänzung zum Ferienobjekt.</li>
-        <li><strong>Ferien- &amp; Campinghütten</strong><br>Effizienter Aufbau, langlebig im Betrieb – ideal für Plätze und Anlagen.</li>
-        <li><strong>Individuelle Ausbauten</strong><br>Optional: Ofen, Kamin, Stromvorbereitung, Bodenaufbau, Dachdeckung nach Wunsch.</li>
-      </ul>
+      <p class="muted">Planung, Bau und Umsetzung – robust, sauber und auf Wunsch komplett schlüsselfertig.</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Blockhütten</h3>
+          <p>Gartenhütte, Wochenendhütte oder Rückzugsort – individuell geplant.</p>
+        </div>
+        <div class="card">
+          <h3>Saunen</h3>
+          <p>Handgefertigte Saunen für Privat, Thermen oder besondere Orte.</p>
+        </div>
+        <div class="card">
+          <h3>Ferien- &amp; Campinghütten</h3>
+          <p>Für Naturprojekte, Campingplätze oder Ferienanlagen – langlebig gebaut.</p>
+        </div>
+        <div class="card">
+          <h3>Individuelle Ausbauten</h3>
+          <p>Optional: Kamin, Dachaufbau, Innenausbau, Vorbereitungen nach Wunsch.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="ueberuns" class="intro">
+    <section id="ueber-uns">
       <h2>Über uns</h2>
-      <p>Wir bauen Blockhäuser und Saunen mit Fokus auf saubere Ausführung, passende Details und langlebige Konstruktionen. Von der ersten Idee bis zur Umsetzung begleiten wir das Projekt transparent und zuverlässig.</p>
-    </section>
+      <p class="muted">
+        Wir bauen in traditioneller Rundholzbauweise – präzise, massiv und mit Liebe zum Detail.
+        Von der Planung bis zur Umsetzung steht saubere Handarbeit im Mittelpunkt.
+      </p>
 
-    <section aria-label="Galerie">
-      <h2>Einblicke</h2>
-      <p>Einblicke in Arbeit, Material und Details.</p>
-      <div class="gallery">
-        <img src="assets/Work1.jpg" alt="Einblick 1">
-        <img src="assets/Work2.jpg" alt="Einblick 2">
-        <img src="assets/Work3.jpg" alt="Einblick 3">
+      <div class="gallery" aria-label="Einblicke">
+        <img src="assets/Work1.jpg" alt="Einblick 1" loading="lazy">
+        <img src="assets/Work2.jpg" alt="Einblick 2" loading="lazy">
+        <img src="assets/Work3.jpg" alt="Einblick 3" loading="lazy">
       </div>
     </section>
 
     <section id="bauweise">
       <h2>Bauweise</h2>
-      <p>Traditionelles Handwerk – klar erklärt, ohne Marketing-Gelaber.</p>
-      <ul>
-        <li>Eckverbindungen (Passgenauigkeit &amp; Setzung)</li>
-        <li>Handgeschälte Stämme (Oberfläche &amp; Haltbarkeit)</li>
-        <li>Massivholz als Klima-Puffer (je nach Projektkonzept)</li>
-      </ul>
+      <p class="muted">Traditionelles Handwerk – klar erklärt, ohne Marketing-Gerede.</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Eckverbindungen</h3>
+          <p>Passgenauigkeit &amp; Setzung sauber berücksichtigt.</p>
+        </div>
+        <div class="card">
+          <h3>Handgeschälte Stämme</h3>
+          <p>Natürliche Oberfläche, hohe Haltbarkeit.</p>
+        </div>
+        <div class="card">
+          <h3>Massivholz</h3>
+          <p>Stabil, langlebig und angenehm im Raumklima.</p>
+        </div>
+        <div class="card">
+          <h3>Individuelle Planung</h3>
+          <p>Maße, Fenster, Türen, Details – passend zum Projekt.</p>
+        </div>
+      </div>
     </section>
 
     <section id="kontakt" class="kontakt">
       <h2>Kontakt</h2>
-      <p>Gern können Sie sich hier melden – wir antworten zuverlässig.</p>
+      <p class="muted">Gerne melden – eine kurze Nachricht reicht. Wir antworten zuverlässig.</p>
 
-      <p><strong>Telefon</strong><br>DEINE NUMMER</p>
-      <p><strong>E-Mail</strong><br>DEINE MAIL</p>
-      <p><strong>Region</strong><br>Bayern</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Telefon</h3>
+          <p>DEINE NUMMER</p>
+        </div>
+        <div class="card">
+          <h3>E-Mail</h3>
+          <p>DEINE MAIL</p>
+        </div>
+        <div class="card">
+          <h3>Region</h3>
+          <p>Allgäu · Bayern</p>
+        </div>
+        <div class="card">
+          <h3>Hinweis</h3>
+          <p>Impressum/Datenschutz werden ergänzt.</p>
+        </div>
+      </div>
     </section>
 
   </main>
@@ -97,6 +140,5 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
