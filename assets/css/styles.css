@@ -1,1 +1,124 @@
+:root{
+  --bg: #f4efe9;
+  --panel: #efe7dc;
+  --text: #2f2722;
+  --muted: #6f6258;
+  --brand: #6b4c35;
+  --brand-2: #a88462;
+  --line: rgba(47,39,34,.12);
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --radius: 16px;
+}
 
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 20% 0%, #fff8f0 0%, var(--bg) 55%, #efe6da 100%);
+  color: var(--text);
+  line-height:1.6;
+}
+
+.hero{
+  min-height: 62vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 4.5rem 1.25rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(107,76,53,.92), rgba(168,132,98,.70)),
+    radial-gradient(800px 400px at 70% 20%, rgba(255,255,255,.25), transparent 60%);
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:-40px;
+  background:
+    radial-gradient(600px 250px at 30% 20%, rgba(255,255,255,.18), transparent 60%),
+    radial-gradient(700px 350px at 70% 80%, rgba(0,0,0,.12), transparent 65%);
+  pointer-events:none;
+}
+
+.hero-content{
+  max-width: 900px;
+  text-align:center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1{
+  margin:0;
+  color: #fff;
+  font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+  letter-spacing: .5px;
+}
+
+.hero-content p{
+  margin: .9rem auto 0;
+  color: rgba(255,255,255,.9);
+  font-size: 1.05rem;
+  max-width: 40ch;
+}
+
+main{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2.2rem 1.25rem 3.5rem;
+}
+
+section{
+  background: rgba(255,255,255,.55);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 2rem 1.6rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+  margin-top: 1.2rem;
+}
+
+h2{
+  margin:0 0 .75rem;
+  font-size: 1.35rem;
+  color: var(--brand);
+}
+
+p{ margin: 0 0 1rem; color: var(--text); }
+.intro p{ color: var(--muted); max-width: 70ch; }
+
+.leistungen ul{
+  list-style:none;
+  padding:0;
+  margin: .8rem 0 0;
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: .75rem;
+}
+
+.leistungen li{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: .85rem .9rem;
+  color: var(--text);
+}
+
+.kontakt{
+  background: linear-gradient(180deg, rgba(239,231,220,.9), rgba(255,255,255,.55));
+}
+
+footer{
+  text-align:center;
+  padding: 1.8rem 1rem 2.5rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+/* Mobile */
+@media (max-width: 700px){
+  .leistungen ul{ grid-template-columns: 1fr; }
+  section{ padding: 1.6rem 1.2rem; }
+}
